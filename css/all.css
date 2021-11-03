@@ -1,1 +1,43 @@
-/* No CSS *//*# sourceMappingURL=all.css.map */
+.box {
+  position: relative;
+  border-radius: 2px;
+}
+
+.box::before, .box::after {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  width: 50%;
+  height: 10px;
+  -webkit-box-shadow: 0 5px 14px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 5px 14px rgba(0, 0, 0, 0.7);
+  z-index: -1;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.box::before {
+  left: 15px;
+  -webkit-transform: skew(-5deg) rotate(-1deg);
+          transform: skew(-5deg) rotate(-1deg);
+}
+
+.box::after {
+  right: 15px;
+  -webkit-transform: skew(5deg) rotate(1deg);
+          transform: skew(5deg) rotate(1deg);
+}
+
+.box:hover::before, .box:hover::after {
+  -webkit-box-shadow: 0 2px 14px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 2px 14px rgba(0, 0, 0, 0.4);
+}
+
+.box:hover::before {
+  left: 5px;
+}
+
+.box:hover::after {
+  right: 5px;
+}
+/*# sourceMappingURL=all.css.map */

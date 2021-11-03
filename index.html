@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>台灣旅遊景點導覽</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -18,7 +19,7 @@
     <link rel="stylesheet" href="css/all.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg pt-4 pb-3 sticky-top">
+    <nav class="navbar navbar-expand-lg bg-white pt-4 pb-3 sticky-top">
       <div class="container">
         <a class="navbar-brand" href="#">
           <img src="img/Logo.png" alt="Logo" />
@@ -28,19 +29,19 @@
             <li class="col nav-item">
               <a class="nav-link active" aria-current="page" href="#">
                 <img src="img/Frame 41.png" alt="台灣景點圖示" />
-                <span>台灣景點</span>
+                <span class="text-decoration-underline">台灣景點</span>
               </a>
             </li>
             <li class="col nav-item">
-              <a class="nav-link active" href="#">
+              <a class="nav-link" href="#">
                 <img src="img/Frame 42.png" alt="美食住宿圖示" />
-                <span>美食住宿</span>
+                <span class="text-decoration-underline">美食住宿</span>
               </a>
             </li>
             <li class="col nav-item">
-              <a class="nav-link active" href="#">
+              <a class="nav-link" href="#">
                 <img src="img/Frame 43.png" alt="景點交通圖示" />
-                <span>景點交通</span>
+                <span class="text-decoration-underline">景點交通</span>
               </a>
             </li>
           </ul>
@@ -61,27 +62,73 @@
     <div class="banner px-4 py-5">
       <div
         id="carouselSlidesOnly"
-        class="carousel slide"
+        class="carousel slide position-relative box"
         data-bs-ride="carousel"
       >
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img
-              src="https://fakeimg.pl/1226x490/"
+              src="https://fakeimg.pl/1226x490"
               class="d-block w-100"
               alt="1"
             />
           </div>
         </div>
+
+        <div class="position-absolute top-50 start-50 translate-middle">
+          <h1>Welcome to Taiwan°</h1>
+          <span>台北、台中、台南、屏東、宜蘭……遊遍台灣</span>
+          <form class="align-items-center my-2">
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control rounded-3 shadow-sm"
+                placeholder="搜尋關鍵字"
+                aria-label="搜尋關鍵字"
+              />
+              <button class="btn btn-primary rounded-3 shadow-sm">
+                <img src="img/Icon/search.png" alt="搜尋按鈕" />
+              </button>
+            </div>
+          </form>
+          <div class="d-flex gx-5 align-items-center">
+            <select class="form-select rounded-3" aria-label="類別選擇">
+              <option selected disabled>類別</option>
+              <option value="景點">景點</option>
+              <option value="活動">活動</option>
+              <option value="美食">美食</option>
+              <option value="住宿">住宿</option>
+            </select>
+            <select class="form-select rounded-3" aria-label="縣市選擇">
+              <option selected disabled>不分縣市</option>
+              <option value="景點">景點</option>
+              <option value="活動">活動</option>
+              <option value="美食">美食</option>
+              <option value="住宿">住宿</option>
+            </select>
+            <button class="btn btn-primary rounded-3 shadow-sm">
+              <img src="img/Icon/GPS.png" alt="定位按鈕" />
+            </button>
+          </div>
+        </div>
       </div>
     </div>
     <div class="content"></div>
-    <div class="footer"></div>
+    <div class="footer text-center py-4">
+      Taiwan Tourguide © Code: Michael / Design: KT
+    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        easing: "ease-in-out",
+      });
+    </script>
   </body>
 </html>

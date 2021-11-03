@@ -1,0 +1,40 @@
+.box {
+  position: relative;
+  border-radius: 2px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 8px;
+    width: 50%;
+    height: 10px;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.7);
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &::before {
+    left: 15px;
+    transform: skew(-5deg) rotate(-1deg);
+  }
+
+  &::after {
+    right: 15px;
+    transform: skew(5deg) rotate(1deg);
+  }
+
+  &:hover {
+    &::before,
+    &::after {
+      box-shadow: 0 2px 14px rgba(0, 0, 0, 0.4);
+    }
+
+    &::before {
+      left: 5px;
+    }
+    &::after {
+      right: 5px;
+    }
+  }
+}
